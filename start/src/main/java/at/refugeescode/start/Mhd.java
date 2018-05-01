@@ -1,16 +1,14 @@
 package at.refugeescode.start;
 
-import org.springframework.boot.ApplicationRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.client.RestTemplate;
 
 @Configuration
 public class Mhd {
     @Bean
-    ApplicationRunner  applicationRunner(){
-        return args -> {
-            System.out.println("my cool hello world");
-        };
+    RestTemplate applicationRunner(){
+        return new RestTemplate();
     }
 
 }
